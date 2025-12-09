@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal File Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-color: #0B1120; /* Dark Navy */
+        --accent-primary: #14b8a6; /* Teal */
+        --accent-secondary: #06b6d4; /* Cyan */
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-color);
+        /* Subtle grid pattern for technical feel */
+        background-image: 
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+        color: #f1f5f9;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Tech-style Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border: 2px solid #0f172a;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes blob {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+      }
+      
+      .animate-fade-up {
+        animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      
+      .animate-fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+      }
+      
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+      
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(45, 212, 191, 0.1); /* Subtle Teal Border */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .tech-border {
+        position: relative;
+      }
+      .tech-border::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.5), transparent);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "mammoth": "https://esm.sh/mammoth@1.6.0",
+    "xlsx": "https://esm.sh/xlsx@0.18.5",
+    "docx": "https://esm.sh/docx@7.8.2",
+    "pptxgenjs": "https://esm.sh/pptxgenjs@3.12.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Universal File Converter",
+  "description": "A futuristic, high-performance file converter app using Gemini API for text-based conversions and browser APIs for image conversions. Features a sleek, dark neon UI with glassmorphism effects.",
+  "requestFramePermissions": []
+}
