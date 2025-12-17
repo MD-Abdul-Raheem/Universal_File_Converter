@@ -42,7 +42,7 @@ A modern, AI-powered file conversion tool that runs entirely in your browser. Co
 - **Tailwind CSS** - Utility-first styling
 
 ### AI & Processing
-- **Google Gemini 1.5 Flash** - AI-powered document understanding
+- **AI Engine** - Intelligent document understanding
 - **jsPDF** - PDF generation
 - **Mammoth.js** - DOCX parsing
 - **SheetJS (xlsx)** - Excel file handling
@@ -53,7 +53,7 @@ A modern, AI-powered file conversion tool that runs entirely in your browser. Co
 
 - Node.js 16+ (for local development)
 - Modern web browser (Chrome, Firefox, Safari, Edge)
-- Google Gemini API Key (for AI conversions)
+- AI API Key (for AI conversions)
 
 ## 🚀 Getting Started
 
@@ -75,14 +75,8 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-VITE_API_KEY=your_google_gemini_api_key_here
+VITE_API_KEY=your_api_key_here
 ```
-
-To get a Google Gemini API key:
-1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Sign in with your Google account
-3. Create a new API key
-4. Copy and paste it into your `.env` file
 
 ### 4. Run Development Server
 
@@ -182,7 +176,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- Google Gemini AI for intelligent document processing
+- AI technology for intelligent document processing
 - Open-source libraries that make this project possible
 - The React and TypeScript communities
 

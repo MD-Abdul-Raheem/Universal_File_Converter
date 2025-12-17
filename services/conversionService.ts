@@ -271,9 +271,9 @@ const convertImageWithCanvas = (file: File, targetMimeType: MimeType): Promise<B
   });
 };
 
-const convertWithGemini = async (file: File, targetMimeType: MimeType): Promise<Blob> => {
-  const apiKey = import.meta.env.VITE_API_KEY || localStorage.getItem('gemini_api_key');
-  if (!apiKey) throw new Error("API Key required. Please add VITE_API_KEY to Vercel environment variables.");
+const convertWithAI = async (file: File, targetMimeType: MimeType): Promise<Blob> => {
+  const apiKey = import.meta.env.VITE_API_KEY;
+  if (!apiKey) throw new Error("Configuration error. Please contact administrator.");
   
   const ai = new GoogleGenAI({ apiKey });
   
@@ -387,5 +387,5 @@ export const convertFile = async (file: File, targetMimeType: MimeType): Promise
   }
 
   // 3. All other complex conversions (PDF, Docx, PPT, Cross-format) -> AI
-  return convertWithGemini(file, targetMimeType);
+  return convertWithAI(file, targetMimeType);
 };

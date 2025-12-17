@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ConverterView from './components/ConverterView';
 import InstructionsView from './components/InstructionsView';
 import AboutView from './components/AboutView';
-import ApiKeyModal from './components/ApiKeyModal';
 import { Page } from './types';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.CONVERTER);
-  const [showApiKeyModal, setShowApiKeyModal] = useState(false);
-
-  useEffect(() => {
-    const hasApiKey = import.meta.env.VITE_API_KEY || localStorage.getItem('gemini_api_key');
-    if (!hasApiKey) {
-      setShowApiKeyModal(true);
-    }
-  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -31,9 +22,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <>
-      {showApiKeyModal && <ApiKeyModal onSave={() => setShowApiKeyModal(false)} />}
-      <div className="min-h-screen font-sans text-slate-200 flex flex-col items-center justify-between p-2 sm:p-4 md:p-6 relative overflow-hidden selection:bg-teal-500/30 selection:text-teal-200">
+    <div className="min-h-screen font-sans text-slate-200 flex flex-col items-center justify-between p-2 sm:p-4 md:p-6 relative overflow-hidden selection:bg-teal-500/30 selection:text-teal-200">
       {/* Ambient Background - Aurora Borealis Theme */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[20%] w-[50rem] h-[50rem] bg-teal-500/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
@@ -50,7 +39,6 @@ const App: React.FC = () => {
       
       <Footer />
     </div>
-    </>
   );
 };
 

@@ -15,7 +15,7 @@ const AboutView: React.FC = () => {
             
             <div className="space-y-4 sm:space-y-6 text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 <p>
-                The <strong className="text-white font-medium">Universal File Converter</strong> (UFC) defines a new standard for client-side utility applications. By hybridizing WebAssembly for speed and Generative AI for intelligence, we eliminate the need for traditional server-side processing queues.
+                The <strong className="text-white font-medium">Universal File Converter</strong> (UFC) defines a new standard for client-side utility applications. By hybridizing WebAssembly for speed and AI for intelligence, we eliminate the need for traditional server-side processing queues.
                 </p>
                 <p>
                 Designed for ephemeral environments, UFC operates on a <span className="text-teal-400 font-medium">Zero-Retention Policy</span>. Files are processed in memory and discarded immediately after the session, guaranteeing absolute data sovereignty.
@@ -27,7 +27,7 @@ const AboutView: React.FC = () => {
                         <ul className="space-y-2 sm:space-y-3">
                             <li className="flex items-center text-xs sm:text-sm"><span className="w-1.5 h-1.5 bg-teal-500 rounded-sm mr-2"></span> React 19 + TypeScript</li>
                             <li className="flex items-center text-xs sm:text-sm"><span className="w-1.5 h-1.5 bg-teal-500 rounded-sm mr-2"></span> Tailwind CSS (Utility)</li>
-                            <li className="flex items-center text-xs sm:text-sm"><span className="w-1.5 h-1.5 bg-teal-500 rounded-sm mr-2"></span> Google Gemini 1.5 Flash</li>
+                            <li className="flex items-center text-xs sm:text-sm"><span className="w-1.5 h-1.5 bg-teal-500 rounded-sm mr-2"></span> AI Processing Engine</li>
                         </ul>
                     </div>
                     <div>
