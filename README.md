@@ -75,7 +75,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-API_KEY=your_google_gemini_api_key_here
+VITE_API_KEY=your_google_gemini_api_key_here
 ```
 
 To get a Google Gemini API key:
